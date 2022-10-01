@@ -8,6 +8,7 @@ import { HeadComponent } from './head/head.component';
 import { FootComponent } from './foot/foot.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

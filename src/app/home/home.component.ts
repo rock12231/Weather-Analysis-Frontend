@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
 
+  data: any
+  city: any = 'kanpur'
+  c: any = 0
+
+  constructor(private http: HttpClient) {
+    this.clickfun();
+  }
   ngOnInit(): void {
+  }
+
+  getData() {
+    this.http.get('http://127.0.0.1:8000/api/df/?format=json')
+      .subscribe(
+        rec => {
+          this.data = rec;
+          console.log(rec, "Data")
+        }
+      )
+  }
+
+  clickfun() {
+    // http://127.0.0.1:8000/api/df/?format=json
+    //https://api.openweathermap.org/data/2.5/weather?q=kanpur&appid=d21ed78a8589962c6cebb0784ab717e4
+    this.http.get('http://127.0.0.1:8000/api/df/?format=json')
+      .subscribe(
+        rec => {
+          this.data = rec;
+          console.log(rec, "Data")
+        }
+      )
   }
 
 }
