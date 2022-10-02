@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-
+  name: string = ''
+  sel: string = ''
   data: any
   city: any = 'kanpur'
   c: any = 0
@@ -20,13 +21,8 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    this.http.get('http://127.0.0.1:8000/api/df/?format=json')
-      .subscribe(
-        rec => {
-          this.data = rec;
-          console.log(rec, "Data")
-        }
-      )
+    console.log(this.name, "Name")
+    console.log(this.sel, "selected")
   }
 
   clickfun() {
