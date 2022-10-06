@@ -5,6 +5,13 @@
         height: 100vh;
  }
 
+.ngx-slider .ngx-slider-bubble.ngx-slider-limit {
+    color: #fff !important;
+}
+.ngx-slider .ngx-slider-bubble {
+    color: #fff !important;
+}
+
  hr {
     border-top: 0px solid #fff;
     height: 4px;
@@ -14,11 +21,15 @@
     background-image: radial-gradient(circle, #0d6efd, #4c8bff, #77a7ff, #a0c2fc, #cadcf8);
  }
 
- .hedder{
+ .day{
+    color: #fff;
+        font-weight: 800;
+        background-color: #80c96d;
+ }
+ .day-head{
     color: #fff;
     font-weight: 800;
     background-color: #4c8bff;
-    border: 0px solid #4c8bff !important;
  }
 
  

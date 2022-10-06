@@ -35,21 +35,30 @@
 <section id="weather" class="d-flex align-items-center">
     <div class="container">
         <div class="row d-flex justify-content-center mt-5 mb-3">
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header text-center">
+            <div class="col-lg-5">
+                <div class="card border-0 text-center">
+                    <div class="card-header day">
                         <h5 class="card-title">DAY</h5>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <input type="date" class="form-control">
+                        <div class="row">
+                            <div class="col-lg-6">
+                               <h5>hhh</h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <h5>hhh</h5>
+                            </div>
+                        </div>
+                        <!-- <h5 class="card-title">Special title treatment</h5> -->
                         <p class="card-text">With sun to additional content.</p>
                         <i class="fa fa-3x fa-cloud-sun-rain  "></i>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <div class="card">
-                    <div class="card-header text-center">
+            <div class="col-lg-7">
+                <div class="card border-0 text-center">
+                    <div class="card-header day">
                         <h5 class="card-title">DAY DETAILS</h5>
                     </div>
                     <div class="card-body">
@@ -66,7 +75,7 @@
         <div class="row mb-4">
             <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">MONDAY</h5>
                     </div>
                     <div class="card-body">
@@ -80,7 +89,7 @@
 
             <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">TUESDAY</h5>
                     </div>
                     <div class="card-body">
@@ -91,9 +100,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">WEDNESDAY</h5>
                     </div>
                     <div class="card-body">
@@ -104,10 +114,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
 
+            <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">THURSDAY</h5>
                     </div>
                     <div class="card-body">
@@ -118,9 +128,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">FRIDAY</h5>
                     </div>
                     <div class="card-body">
@@ -131,9 +142,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">SATURDAY</h5>
                     </div>
                     <div class="card-body">
@@ -144,10 +156,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
 
+            <div class="col">
                 <div class="card border-0 text-center">
-                    <div class="card-header hedder">
+                    <div class="card-header day-head">
                         <h5 class="card-title">SUNDAY</h5>
                     </div>
                     <div class="card-body">
@@ -159,9 +171,13 @@
                 </div>
             </div>
         </div>
-        <div class="row p-4 mb-1">
-            <label for="customRange2" class="form-label text-light">Example range</label>
-            <input type="range" class="form-range" min="0" max="23" value="1" id="customRange2">
+ 
+        <div class="row p-3 mb-1 custom-slider">
+            <label for="customRange2" class="form-label text-light">Select Hours</label>
+            <ngx-slider class="form-range text-light" id="customRange2" [(value)]="value" [options]="options"></ngx-slider>
+            
+            <!-- <input id="range" type="range" class="form-range" min="0" max="23" value="1" id="customRange2"> -->
         </div>
+
     </div>
 </section>

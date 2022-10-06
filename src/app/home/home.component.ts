@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  value: number = 1;
+  
+  options: Options = {
+    showTicksValues: true,
+    floor: 0,
+    ceil: 23,
+    showTicks: true
+  };
 
   name: string = ''
   sel: string = ''
