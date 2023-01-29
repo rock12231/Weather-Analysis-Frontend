@@ -41,18 +41,18 @@
                         <h5 class="card-title">DAY</h5>
                     </div>
                     <div class="card-body">
-                        <input type="date" class="form-control">
+                        <input type="date" [(ngModel)]="date" (change)="clickfun()" class="form-control form-control-sm">
                         <div class="row">
-                            <div class="col-lg-6">
-                               <h5>hhh</h5>
+                            <div class="col-lg-6 mt-1">
+                                <i class="fa fa-4x fa-cloud-sun-rain"></i>
+                                <p class="card-text pt-1"> <i class="fa fa-wind "></i> 24KM/H</p>
                             </div>
-                            <div class="col-lg-6">
-                                <h5>hhh</h5>
+                            <div class="col-lg-6 mt-1">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With sun to additional content.</p>
+                                <h1 *ngIf="data" class="card-title">{{data[0].Temperature}}°C</h1>
                             </div>
                         </div>
-                        <!-- <h5 class="card-title">Special title treatment</h5> -->
-                        <p class="card-text">With sun to additional content.</p>
-                        <i class="fa fa-3x fa-cloud-sun-rain  "></i>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="card-body">
                         <i class="fa fa-4x fa-cloud-sun"></i>
-                        <h1 class="card-title">24°C</h1>
+                        <h1 *ngIf="data" class="card-title">24°C</h1>
                         <hr class="hr-primary">
                         <p class="text-muted">Augest 21</p>
                     </div>
@@ -171,11 +171,12 @@
                 </div>
             </div>
         </div>
- 
+
         <div class="row p-3 mb-1 custom-slider">
             <label for="customRange2" class="form-label text-light">Select Hours</label>
-            <ngx-slider class="form-range text-light" id="customRange2" [(value)]="value" [options]="options"></ngx-slider>
-            
+            <ngx-slider class="form-range text-light" id="customRange2" [(value)]="value" [options]="options">
+            </ngx-slider>
+
             <!-- <input id="range" type="range" class="form-range" min="0" max="23" value="1" id="customRange2"> -->
         </div>
 
